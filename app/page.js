@@ -1,5 +1,5 @@
 import Terminal from "@/components/Terminal";
-import styles from "./page.module.css";
+import styles from "./Home.module.css";
 
 export default function Home() {
   return (
