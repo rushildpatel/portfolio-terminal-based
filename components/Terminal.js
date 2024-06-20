@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import Command from "./Command";
+import styles from "./Terminal.module.css";
 import { CONTENTS } from "../utils/commandHelper";
 
 export default function Terminal() {
@@ -9,16 +10,21 @@ export default function Terminal() {
   const [loading, setLoading] = useState(false);
   const terminalRef = useRef(null);
 
-  const escapeHTML = (str) => {
-    str.replace(/&/g, "&amp;").replace(/</g, "&lt").replace(/>/g, "&gt").replace(/"/g, "&quot").replace(/'/g, "&#039");
-  };
+  const escapeHTML = (str) =>
+    str
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+
 
   const addCommand = async (command) => {
     let output;
     setLoading(true);
     setCommands([...commands, { command, output: "Loading..." }]);
     if (`${command}` in CONTENTS) {
-      output = await CONTENTS[`${command}`];
+      output = await CONTENTS[`${command}`]();
     } else if (command === "clear") {
       setLoading(false);
       return setCommands([]);

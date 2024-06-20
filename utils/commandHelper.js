@@ -40,6 +40,33 @@ function getAge(dateString) {
   return age;
 }
 
+const getContacts = async () => {
+  const contactMediums = await (await fetch("/api/contacts")).json();
+  return contactMediums
+    .map(
+      (contact) => `<div style="display: flex; justify-content: space-between;">
+      <p style="font-size: 15px">${contact.medium}</p>
+      <a class="meaning" href="${contact.link}" target="_blank">${contact.username}</a>
+    </div>`
+    )
+    .join("");
+};
+
+const getProjects = async () => {
+  const projects = await (await fetch("/api/projects")).json();
+  const projectHTML =
+    `<h3>My Projects (You can scroll)</h3>` +
+    projects
+      .map(
+        (project) => `<div class="command">
+        <a href="${project.link}" target="_blank"><b class="command">${project.name}</b></a> - <b>${project.stack.join(", ")}</b>
+        <p class="meaning">${project.description}</p>
+      </div>`
+      )
+      .join("");
+  return projectHTML;
+};
+
 export const CONTENTS = {
   help: () =>
     COMMANDS.map(
@@ -75,29 +102,3 @@ export const CONTENTS = {
   error: (input) => `<div class="help-command">sh: Unknown command: ${input}</div><div class="help-command">See \`help\` for info`,
 };
 
-const getContacts = async () => {
-  const contactMediums = await (await fetch("/api/contacts")).json();
-  return contactMediums
-    .map(
-      (contact) => `<div style="display: flex; justify-content: space-between;">
-      <p style="font-size: 15px">${contact.medium}</p>
-      <a class="meaning" href="${contact.link}" target="_blank">${contact.username}</a>
-    </div>`
-    )
-    .join("");
-};
-
-const getProjects = async () => {
-  const projects = await (await fetch("/api/projects")).json();
-  const projectHTML =
-    `<h3>My Projects (You can scroll)</h3>` +
-    projects
-      .map(
-        (project) => `<div class="command">
-        <a href="${project.link}" target="_blank"><b class="command">${project.name}</b></a> - <b>${project.stack.join(", ")}</b>
-        <p class="meaning">${project.description}</p>
-      </div>`
-      )
-      .join("");
-  return projectHTML;
-};

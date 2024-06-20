@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <h1>
-        rushil_patel:$ <span className={style.help}> type "help" to start</span>
+        rushil_patel:$ <span className={styles.help}> type "help" to start</span>
       </h1>
       <p>
         Visit{" "}
