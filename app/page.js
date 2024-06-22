@@ -10,7 +10,7 @@ export default function Home() {
       <p>
         Visit{" "}
         <a href="https://rushilpatel.me/" target="_blank" rel="noreferrer">
-          NORMAL WEBSITE
+          SIMPLIFIED PORTFOLIO VIEW
         </a>
       </p>
       <Terminal />

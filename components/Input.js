@@ -22,7 +22,6 @@ export default function Input({ command, onSubmit }) {
         <span style={{ color: "#ff9e64" }}>λ</span> ::
         {"~"}
         <span style={{ color: "var(--primary)" }}>~</span>
-        {"~"}
         <span style={{ color: "var(--secondary)" }}>&gt;&gt;</span>
       </label>
 
