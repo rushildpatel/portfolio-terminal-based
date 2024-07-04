@@ -55,15 +55,24 @@ const getContacts = async () => {
 const getProjects = async () => {
   const projects = await (await fetch("/api/projects")).json();
   const projectHTML =
-    `<h3>My Projects (You can scroll)</h3>` +
-    projects
-      .map(
-        (project) => `<div class="command">
-        <a href="${project.link}" target="_blank"><b class="command">${project.name}</b></a> - <b>${project.stack.join(", ")}</b>
-        <p class="meaning">${project.description}</p>
-      </div>`
-      )
-      .join("");
+        `<table style="width: 100%; border-collapse: collapse; border: 1px solid var(--extra-color); table-layout: fixed;">
+          <tr style="background-color: var(--primary);">
+            <th style="border: 1px solid var(--extra-color); padding: 8px; text-align: left;">Project Name</th>
+            <th style="border: 1px solid var(--extra-color); padding: 8px; text-align: left;">Stack</th>
+            <th style="border: 1px solid var(--extra-color); padding: 8px; text-align: left;">Description</th>
+          </tr>` +
+        projects
+          .map(
+            (project) => `<tr>
+              <td style="border: 1px solid var(--extra-color); padding: 8px; text-align: left; word-wrap: break-word;">
+                <a href="${project.link}" target="_blank" style="color: var(--primary);">${project.name}</a>
+              </td>
+              <td style="border: 1px solid var(--extra-color); padding: 8px; text-align: left; word-wrap: break-word;">${project.stack.join(", ")}</td>
+              <td style="border: 1px solid var(--extra-color); padding: 8px; text-align: left; word-wrap: break-word;">${project.description}</td>
+            </tr>`
+          )
+          .join("") +
+        `</table>`;
   return projectHTML;
 };
 
@@ -84,14 +93,27 @@ export const CONTENTS = {
     <br /><br />
   `,
   education: () => `I am a CS Grad Student from <a href="https://www.ncsu.edu/" target="_blank">NC State, Raleigh, NC</a>`,
-  skills: () => `
-  I am experienced with Javascript, Typescript and Python and the web technologies dominating at the time:<br />
-  <div class="skill"><b>core</b>: HTML, CSS, Node.js and PHP<br /></div>
-  <div class="skill"><b>frameworks</b>: React, NextJS, Express, Angular<br /></div>
-  <div class="skill"><b>database</b>: MongoDB, PostgreSQL, MySQL<br /></div>
-  I also have knowledge of basic shell scripting and my dotfiles can be found <a href="https://github.com/rushildpatel" target="_blank">here</a>.
-<br /><br />
-  I also have experience with Mobile Development with Flutter.
+  skills: () => `<body style="background-color: var(--background-color); color: var(--text-color);">
+  <div>
+    <table style="width: 100%; border-collapse: collapse; border: 1px solid var(--secondary);">
+      <tr style="background-color: var(--text-color);">
+        <th style="border: 1px solid var(--extra-color); padding: 8px; text-align: left; color: var(--background-color);">Category</th>
+        <th style="border: 1px solid var(--extra-color); padding: 8px; text-align: left; color: var(--background-color);">Skills</th>
+      </tr>
+      <tr>
+        <td style="border: 1px solid var(--extra-color); padding: 8px; text-align: left; color: var(--text-color);">Core</td>
+        <td style="border: 1px solid var(--extra-color); padding: 8px; text-align: left; color: var(--text-color);">HTML, CSS, Node.js</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid var(--extra-color); padding: 8px; text-align: left; color: var(--text-color);">Frameworks</td>
+        <td style="border: 1px solid var(--extra-color); padding: 8px; text-align: left; color: var(--text-color);">React, NextJS, Express, Angular</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid var(--extra-color); padding: 8px; text-align: left; color: var(--text-color);">Database</td>
+        <td style="border: 1px solid var(--extra-color); padding: 8px; text-align: left; color: var(--text-color);">MongoDB, PostgreSQL, MySQL</td>
+      </tr>
+    </table>
+  </div>
   `,
   projects: getProjects,
   contact: getContacts,
