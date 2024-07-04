@@ -43,13 +43,14 @@ export default function Terminal() {
       terminalRef.current.scrollTop = terminalRef.current.scrollHeight;
     }
   };
-  
+
   return (
     <div className={styles.terminal} ref={terminalRef}>
       {commands.map(({ command, output }, index) => (
         <Command command={command} output={output} key={index} />
       ))}
       {!loading && <Command onSubmit={(command) => addCommand(command)} />}
+      <br></br>
     </div>
   );
 }
