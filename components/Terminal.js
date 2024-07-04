@@ -21,8 +21,6 @@ export default function Terminal() {
 
   const addCommand = async (command) => {
     let output;
-    command = command.trim();
-
     setLoading(true);
     setCommands([...commands, { command, output: "Loading..." }]);
     if (`${command}` in CONTENTS) {
@@ -30,10 +28,7 @@ export default function Terminal() {
     } else if (command === "clear") {
       setLoading(false);
       return setCommands([]);
-    } else if(command === "") {
-      null;
-    }
-    else {
+    } else {
       output = CONTENTS.error(escapeHTML(command));
     }
 

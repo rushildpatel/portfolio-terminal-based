@@ -6,7 +6,6 @@ export default function Command({ command, output, onSubmit }) {
     <div>
       <Input command={command} onSubmit={(command) => onSubmit(command)} />
       {output && <Output output={output} />}
-      <br/>
     </div>
   );
 }
