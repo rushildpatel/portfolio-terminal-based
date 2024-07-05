@@ -40,6 +40,28 @@ function getAge(dateString) {
   return age;
 }
 
+const githubUrl = "github.svg";
+const emailUrl = "email.svg";
+const linkedinUrl = "linkedin.svg";
+const instagramUrl = "instagram.svg";
+
+const iconsHTML = `
+  <br/>Or click on any of the icons below: <br/>
+  <div style="display: inline-block; background-color: white; padding: 2px; border-radius: 4px; padding-top: 1px">
+    <a class="meaning" href="https://github.com/rushildpatel" target="_blank"><img src="${githubUrl}" alt="GitHub" style="width: 20px; height: 20px;"></a>
+  </div>
+  <div style="display: inline-block; background-color: white; padding: 2px; border-radius: 4px;">
+    <a class="meaning" href="mailto:rushildineshpatel2000@gmail.com" target="_blank"><img src="${emailUrl}" alt="Email" style="width: 20px; height: 20px;"></a>
+  </div>
+  <div style="display: inline-block; background-color: white; padding: 2px; border-radius: 4px;">
+    <a class="meaning" href="https://www.linkedin.com/in/rushilpatel07/" target="_blank"><img src="${linkedinUrl}" alt="LinkedIn" style="width: 20px; height: 20px;"></a>
+  </div>
+   <div style="display: inline-block; background-color: white; padding: 2px; border-radius: 4px;">
+    <a class="meaning" href="https://www.instagram.com/rushil______/" target="_blank"><img src="${instagramUrl}" alt="Instagram" style="width: 20px; height: 20px;"></a>
+  </div><br/>
+  `;
+
+
 const getContacts = async () => {
   const contactMediums = await (await fetch("/api/contacts")).json();
   return contactMediums
@@ -50,7 +72,7 @@ const getContacts = async () => {
     </div>`
     )
     .join("")
-    +`<br/>`;
+    +`${iconsHTML} <br/>`;
 };
 
 const getProjects = async () => {
