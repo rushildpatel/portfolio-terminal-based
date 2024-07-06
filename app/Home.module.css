@@ -11,3 +11,18 @@
 .help {
   color: var(--text-color);
 }
+
+.button {
+  display: inline-block;
+  background-color: var(--text-color);
+  padding: 10px; 
+  border-radius: 6px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  color: var(--background-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: large;
+  font-family: "Fira Code", sans-serif;
+}
