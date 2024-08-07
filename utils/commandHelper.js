@@ -152,4 +152,3 @@ export const CONTENTS = {
   },
   error: (input) => `<div class="help-command">sh: Unknown command: ${input}</div><div class="help-command">See \`help\` for info<br/>`,
 };
-
