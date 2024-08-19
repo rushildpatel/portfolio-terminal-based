@@ -51,21 +51,30 @@ const linkedinUrl = "linkedin.svg";
 const instagramUrl = "instagram.svg";
 
 const iconsHTML = `
-  <br/>Or click on any of the icons below: <br/>
-  <div style="display: inline-block; background-color: white; padding: 2px; border-radius: 4px; padding-top: 1px">
-    <a class="meaning" href="https://github.com/rushildpatel" target="_blank"><img src="${githubUrl}" alt="GitHub" style="width: 20px; height: 20px;"></a>
+  <div style="text-align: center; margin: 16px 0;">
+    <div style="display: inline-block; background-color: var(--extra-color); padding: 8px; border-radius: 8px; margin: 4px;">
+      <a href="https://github.com/rushildpatel" target="_blank" style="text-decoration: none;">
+        <img src="${githubUrl}" alt="GitHub" style="width: 20px; height: 20px;">
+      </a>
+    </div>
+    <div style="display: inline-block; background-color: var(--extra-color); padding: 8px; border-radius: 8px; margin: 4px;">
+      <a href="mailto:rushildineshpatel2000@gmail.com" target="_blank" style="text-decoration: none;">
+        <img src="${emailUrl}" alt="Email" style="width: 20px; height: 20px;">
+      </a>
+    </div>
+    <div style="display: inline-block; background-color: var(--extra-color); padding: 8px; border-radius: 8px; margin: 4px;">
+      <a href="https://www.linkedin.com/in/rushilpatel07/" target="_blank" style="text-decoration: none;">
+        <img src="${linkedinUrl}" alt="LinkedIn" style="width: 20px; height: 20px;">
+      </a>
+    </div>
+    <div style="display: inline-block; background-color: var(--extra-color); padding: 8px; border-radius: 8px; margin: 4px;">
+      <a href="https://www.instagram.com/rushil______/" target="_blank" style="text-decoration: none;">
+        <img src="${instagramUrl}" alt="Instagram" style="width: 20px; height: 20px;">
+      </a>
+    </div>
   </div>
-  <div style="display: inline-block; background-color: white; padding: 2px; border-radius: 4px;">
-    <a class="meaning" href="mailto:rushildineshpatel2000@gmail.com" target="_blank"><img src="${emailUrl}" alt="Email" style="width: 20px; height: 20px;"></a>
-  </div>
-  <div style="display: inline-block; background-color: white; padding: 2px; border-radius: 4px;">
-    <a class="meaning" href="https://www.linkedin.com/in/rushilpatel07/" target="_blank"><img src="${linkedinUrl}" alt="LinkedIn" style="width: 20px; height: 20px;"></a>
-  </div>
-   <div style="display: inline-block; background-color: white; padding: 2px; border-radius: 4px;">
-    <a class="meaning" href="https://www.instagram.com/rushil______/" target="_blank"><img src="${instagramUrl}" alt="Instagram" style="width: 20px; height: 20px;"></a>
-  </div><br/>
-  `;
-
+  <br/>
+`;
 
 const getContacts = async () => {
   const contactMediums = await (await fetch("/api/contacts")).json();
@@ -85,7 +94,7 @@ const getProjects = async () => {
   const projectHTML = projects
     .map(
       (project) => `
-      <div style="border-radius: 8px; padding: 16px; margin-bottom: 16px; background-color: var(--background-color);">
+      <div style="border-radius: 8px; padding: 16px; margin-bottom: 4px; background-color: var(--background-color);">
         <h2 style="color: var(--primary); margin: 0;">
           <a href="${project.link}" target="_blank" style="text-decoration: none; color: var(--primary);">${project.name}</a>
         </h2>
@@ -124,12 +133,13 @@ const getProjects = async () => {
           text-decoration: none; 
           font-size: 12px; 
           line-height: 1;
-        ">GitHub</a>
+        ">GitHub Repo</a>
       </div>`
     )
     .join("");
   return projectHTML;
 };
+
 
 
 const ncsuLogo = "ncsu-logo.png";
@@ -188,8 +198,8 @@ const getExperience = () => `
           Software Engineering Intern | May 2024 – Aug 2024
         </p>
         <ul style="padding-left: 16px; margin: 8px 0 0; color: white;">
-          <li>Developed modifications to industry leading cloud CAD software OnShape, by adding features and executing an overhaul in a fullstack development Agile SDLC.</li>
-          <li>Implemented end to end changes to TypeScript frontend (Angular, VueJS), Java server, and C++ geometry backend to introduce the new "midpointline" sketch tool, and released it in live production in the latest sprint release.</li>
+          <li>Developed modifications to industry leading cloud CAD software <a href="https://www.onshape.com/en/" target="_blank" style="color: var(--primary); text-decoration: none;">OnShape</a>, by adding features and executing an overhaul in a fullstack development Agile SDLC.</li>
+          <li>Implemented end-to-end changes to TypeScript frontend (Angular, VueJS), Java server, and C++ geometry backend to introduce the new "<a href="https://forum.onshape.com/discussion/24797/improvements-to-onshape-august-8th-2024/" target="_blank" style="color: var(--primary); text-decoration: none;">midpointline</a>" sketch tool, and released it in live production in the latest sprint release.</li>
           <li>Developed Unit testing and Playwright tests for my client-side code and integrated it into the CI/CD automated tests.</li>
         </ul>
       </div>
@@ -205,7 +215,7 @@ const getExperience = () => `
           Open Source Contributor | Oct 2023 – Dec 2023
         </p>
         <ul style="padding-left: 16px; margin: 8px 0 0; color: white;">
-          <li>Collaborated with the Nutanix team to extend the NDB operator's capabilities, focusing on supporting Postgres High Availability (HA) databases using Go, Kubernetes, and Docker.</li>
+          <li>Collaborated with the Nutanix team to extend the <a href="https://www.nutanix.com/products/database-service" target="_blank" style="color: var(--primary); text-decoration: none;">NDB operator's</a> capabilities, focusing on supporting Postgres High Availability (HA) databases using Go, Kubernetes, and Docker.</li>
           <li>Coded adapter design OOPS pattern class to facilitate seamless bridging of client messages to backend containers in Go.</li>
         </ul>
       </div>
@@ -239,13 +249,14 @@ const getExperience = () => `
         <ul style="padding-left: 16px; margin: 8px 0 0; color: white;">
           <li>Employed ResNet-based transfer learning to achieve an 85% accuracy rate in identifying unhealthy skin conditions.</li>
           <li>Developed and deployed APIs on AWS EC2 instances for image segmentation models like Mask-RCNN and ResNet.</li>
-          <li>Revamped website exposing the APIs live and storing all the user-uploaded images securely in AWS S3.</li>
+          <li><a href="https://www.aim4u.co.in/#/" target="_blank" style="color: var(--primary); text-decoration: none;">Revamped website</a> exposing the APIs live and storing all the user-uploaded images securely in AWS S3.</li>
         </ul>
       </div>
     </div>
     
   </div>
 `;
+
 
 
 const getAbout = () => `
@@ -266,6 +277,56 @@ const getAbout = () => `
   </div>
 `;
 
+const getSkills = () => `
+  <div style="padding: 16px; background-color: var(--background-color);">
+    ${[
+      {
+        category: "Programming Languages",
+        skills: "C++, Python, Javascript, Typescript, Java, Go, C, Ruby"
+      },
+      {
+        category: "Web Technologies",
+        skills: "Node.js, NextJS, React, Angular, Express.js, Django, Flask, Spring Boot, Tailwind"
+      },
+      {
+        category: "Databases and Cloud",
+        skills: "MongoDB, MySQL, PostgreSQL, Firebase, Prisma, Amazon Web Services, GCP, Cloudflare"
+      },
+      {
+        category: "Tools and Frameworks",
+        skills: "Shell, Docker, Kubernetes, CI/CD, Git, Keras, Tensorflow, Pytorch, Scikit-learn, Pandas, Numpy"
+      }
+    ]
+      .map(
+        ({ category, skills }) => `
+        <div style="padding: 8px 0; margin-bottom: 4px;">
+          <h2 style="color: var(--primary); margin: 0;">
+            ${category}
+          </h2>
+          <p style="color: var(--text-color); margin: 2px 0 0;">
+            ${skills.split(", ").map(
+              skill => `
+              <span style="
+                display: inline-block;
+                padding: 4px 8px;
+                margin: 2px;
+                background-color: var(--extra-color);
+                color: black;
+                border-radius: 4px;
+                transition: all 0.3s ease;
+                font-size: 12px;
+              " 
+              onmouseover="this.style.backgroundColor = 'var(--text-color)'; this.style.color = 'var(--extra-color)';"
+              onmouseout="this.style.backgroundColor = 'var(--extra-color)'; this.style.color = 'black';">
+                ${skill}
+              </span>`
+            ).join("")}
+          </p>
+        </div>`
+      )
+      .join("")}
+  </div>
+`;
 
 
 export const CONTENTS = {
@@ -281,29 +342,7 @@ export const CONTENTS = {
 
   about: getAbout,
   education: getEducation,
-  skills: () => `<body style="background-color: var(--background-color); color: var(--text-color);">
-  <div>
-    <table style="width: 100%; border-collapse: collapse; border: 1px solid var(--secondary);">
-      <tr style="background-color: var(--text-color);">
-        <th style="border: 1px solid var(--extra-color); padding: 8px; text-align: left; color: var(--background-color);">Category</th>
-        <th style="border: 1px solid var(--extra-color); padding: 8px; text-align: left; color: var(--background-color);">Skills</th>
-      </tr>
-      <tr>
-        <td style="border: 1px solid var(--extra-color); padding: 8px; text-align: left; color: var(--text-color);">Core</td>
-        <td style="border: 1px solid var(--extra-color); padding: 8px; text-align: left; color: var(--text-color);">HTML, CSS, Node.js</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid var(--extra-color); padding: 8px; text-align: left; color: var(--text-color);">Frameworks</td>
-        <td style="border: 1px solid var(--extra-color); padding: 8px; text-align: left; color: var(--text-color);">React, NextJS, Express, Angular</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid var(--extra-color); padding: 8px; text-align: left; color: var(--text-color);">Database</td>
-        <td style="border: 1px solid var(--extra-color); padding: 8px; text-align: left; color: var(--text-color);">MongoDB, PostgreSQL, MySQL</td>
-      </tr>
-    </table>
-  </div>
-  <br/>
-  `,
+  skills: getSkills,
   projects: getProjects,
   experience: getExperience,
   contact: getContacts,

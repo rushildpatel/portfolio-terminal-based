@@ -1,8 +1,9 @@
+"use client";
 import Image from 'next/image';
-import Education from "@/components/simpleComponents/Education";
-import Project from "@/components/simpleComponents/Project";
-import Skills from '@/components/simpleComponents/Skills';
-import Experience from '@/components/simpleComponents/Experience';
+import Education from "@/components/Education";
+import Project from "@/components/Project";
+import Skills from '@/components/Skills';
+import Experience from '@/components/Experience';
 
 export default async function Home() {
     return (
@@ -27,9 +28,6 @@ export default async function Home() {
             </div>
         </div>
         <div className="projects">
-            <Project></Project>
-            <Project></Project>
-            <Project></Project>
             <Project></Project>
             <Project></Project>
         </div>
