@@ -25,12 +25,24 @@ export default function Home() {
             {/* Left Navbar */}
             <nav style={styles.navbar}>
                 <ul style={styles.navList}>
-                    <li style={styles.navItem}><a href="#profile" style={styles.navLink}>Profile</a></li>
-                    <li style={styles.navItem}><a href="#experience" style={styles.navLink}>Experience</a></li>
-                    <li style={styles.navItem}><a href="#education" style={styles.navLink}>Education</a></li>
-                    <li style={styles.navItem}><a href="#projects" style={styles.navLink}>Projects</a></li>
-                    <li style={styles.navItem}><a href="#skills" style={styles.navLink}>Skills</a></li>
-                    <li style={styles.navItem}><a href="#contact" style={styles.navLink}>Contact</a></li>
+                    <li style={styles.navItem}><a href="#profile" style={styles.navLink}>
+                        {/* <Image src="/email.svg" alt="Email Icon" width={24} height={24} style={iconStyles.email} /> */}
+                        Profile</a></li>
+                    <li style={styles.navItem}><a href="#experience" style={styles.navLink}>
+                         {/* <Image src="/email.svg" alt="Email Icon" width={24} height={24} style={iconStyles.email} /> */}
+                        Experience</a></li>
+                    <li style={styles.navItem}><a href="#education" style={styles.navLink}>
+                         {/* <Image src="/email.svg" alt="Email Icon" width={24} height={24} style={iconStyles.email} /> */}
+                        Education</a></li>
+                    <li style={styles.navItem}><a href="#projects" style={styles.navLink}>
+                         {/* <Image src="/email.svg" alt="Email Icon" width={24} height={24} style={iconStyles.email} /> */}
+                        Projects</a></li>
+                    <li style={styles.navItem}><a href="#skills" style={styles.navLink}>
+                         {/* <Image src="/email.svg" alt="Email Icon" width={24} height={24} style={iconStyles.email} /> */}
+                        Skills</a></li>
+                    <li style={styles.navItem}><a href="#contact" style={styles.navLink}>
+                         {/* <Image src="/email.svg" alt="Email Icon" width={24} height={24} style={iconStyles.email} /> */}
+                        Contact</a></li>
                     <li style={styles.navItem}>
                         <a
                             href="https://drive.google.com/file/d/11mLnjl9vz8ghTB--4Ex0nuNgZfoE5lPy/view?usp=drive_link"
@@ -38,9 +50,13 @@ export default function Home() {
                             rel="noopener noreferrer"
                             style={styles.navLink}
                         >
+                             {/* <Image src="/email.svg" alt="Email Icon" width={24} height={24} style={iconStyles.email} /> */}
                             See Resume
                         </a>
                     </li>
+                    <li style={styles.navItem}><a href="/terminalPage" style={styles.navLink}>
+                         {/* <Image src="/email.svg" alt="Email Icon" width={24} height={24} style={iconStyles.email} /> */}
+                    Terminal View</a></li>
                 </ul>
             </nav>
 
@@ -125,6 +141,8 @@ export default function Home() {
                 </div>
                 <div id="contact">
                     <h3 style={styles.heading}>CONTACT ME</h3>
+                    <div>If you want to know more about my experiences and journey, or just talk in general, get in touch <strong>rdpate24@ncsu.edu</strong>! 😉</div>
+                    <br/>
                     <div style={styles.links}>
                         <a
                             href="mailto:rushildineshpatel2000@gmail.com"
