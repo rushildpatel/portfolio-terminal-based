@@ -156,7 +156,7 @@ const getEducation = () => `
           North Carolina State University, NC, US
         </h2>
         <p style="margin: 0;">
-          Master of Computer Science | (GPA: 3.94/4)
+          Master of Computer Science | (GPA: 4/4)
           <br/>Expected: Dec 2024
         </p>
       </div>

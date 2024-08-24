@@ -3,7 +3,7 @@
     export default function Experience() {
         return (
             <div style={styles.container}>
-                {/* PTC Experience */}
+
                 <div style={styles.experienceTile}>
                     <div style={styles.leftColumn}>
                         <Image src="/ptcInc-logo.png" alt="PTC Logo" layout="responsive" width={200} height={200} style={styles.logo} />
@@ -21,7 +21,6 @@
                 </div>
                 <br />
 
-                {/* Nutanix Experience */}
                 <div style={styles.experienceTile}>
                     <div style={styles.leftColumn}>
                         <Image src="/nutanix-logo.png" alt="Nutanix Logo" layout="responsive" width={200} height={200} style={styles.logo} />
@@ -38,7 +37,6 @@
                 </div>
                 <br />
 
-                {/* Smollan Experience */}
                 <div style={styles.experienceTile}>
                     <div style={styles.leftColumn}>
                         <Image src="/smollan-logo.png" alt="Smollan Logo" layout="responsive" width={200} height={200} style={styles.logo} />
@@ -55,7 +53,6 @@
                 </div>
                 <br />
 
-                {/* Skinzy Software Solutions Experience */}
                 <div style={styles.experienceTile}>
                     <div style={styles.leftColumn}>
                         <Image src="/skinzy-logo.png" alt="Skinzy Logo" layout="responsive" width={200} height={200} style={styles.logo} />
@@ -77,7 +74,7 @@
 
 const styles = {
     container: {
-        fontFamily: 'Arial, sans-serif',
+        fontFamily: 'monospace, Courier New, Arial, sans-serif',
         color: '#333',
         margin: '0 auto',
         maxWidth: '1000px', 
@@ -86,7 +83,7 @@ const styles = {
     experienceTile: {
         display: 'flex',
         alignItems: 'center',
-        marginBottom: '0px', // Reduced from 20px to 10px
+        marginBottom: '0px',
         padding: '15px',
         borderRadius: '10px',
         boxShadow: 'none',

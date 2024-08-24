@@ -9,7 +9,7 @@ export default function Home() {
         {/* <a className={styles.button} href="https://rushilpatel.me/" target="_blank">
           Simplified Portfolio View 
         </a> */}
-        <a className={styles.button} href="/simple">Go to Simple Resume Style Page View [↗]</a>
+        <a className={styles.button} href="/simple" target="blank">Go to Simple Resume Style Page View [↗]</a>
         {/* <Link className={styles.button} href="/simple">
             Go to Simple Page
         </Link> */}
@@ -17,12 +17,6 @@ export default function Home() {
       <h1>
         rushil_patel:$ <span className={styles.help}> type <strong style={{color: "white"}}>"help"</strong> to start</span>
       </h1>
-      {/* <p>
-        Visit{" "}
-        <a href="https://rushilpatel.me/" target="_blank" rel="noreferrer">
-          SIMPLIFIED PORTFOLIO VIEW
-        </a>
-      </p> */}
       <Terminal />
     </div>
   );

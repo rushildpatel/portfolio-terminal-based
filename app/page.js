@@ -8,13 +8,10 @@ export default function Home() {
 
   return (
     <div style={styles.container}>
-      <Head>
-        <link rel="stylesheet" href="https://use.typekit.net/your-kit-id.css" />
-      </Head>
       <div style={styles.leftSide}>
         <h1 style={styles.heading}>Terminal View</h1>
         <p style={styles.description}>
-          For those curious about my profile in an interactive way, like a programmer working on a terminal screen. If you have a few minutes time, I recommend choosing this option.
+          For those curious exploratory folks who want to know about my profile in an interactive way, like a programmer working on a terminal screen. If you have a few minutes, <span style={styles.recommendation}>I recommend this option.</span>
         </p>
         <a
           href="/terminalPage"
@@ -28,7 +25,7 @@ export default function Home() {
       <div style={styles.rightSide}>
         <h1 style={styles.heading}>Simple Resume Style View</h1>
         <p style={styles.description}>
-          If you're in a hurry and want to know all about me in a quick, resume-style simplified view, then this option is for you.
+          If you're in a hurry and want to know about me in a quick, resume-style simplified view, then choose this option.
         </p>
         <a
           href="/simple"
@@ -47,32 +44,32 @@ const styles = {
   container: {
     display: 'flex',
     height: '100vh',
-    fontFamily: 'proxima-nova, Arial, sans-serif',
+    fontFamily: 'monospace',
     margin: 0,
     padding: 0,
     overflow: 'hidden',
   },
   leftSide: {
     flex: '1',
-    backgroundColor: '#000', // Black background
-    color: '#fff', // White text
+    backgroundColor: '#000', 
+    color: '#fff',
     padding: '40px',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'flex-start', // Align items to the left
-    textAlign: 'left', // Left align text
+    alignItems: 'flex-start',
+    textAlign: 'left', 
   },
   rightSide: {
     flex: '1',
-    backgroundColor: '#fff', // White background
-    color: '#000', // Black text
+    backgroundColor: '#fff',
+    color: '#000', 
     padding: '40px',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'flex-end', // Align items to the right
-    textAlign: 'right', // Right align text
+    alignItems: 'flex-end', 
+    textAlign: 'right', 
   },
   heading: {
     fontSize: '3.0rem',
@@ -83,13 +80,17 @@ const styles = {
     fontSize: '1rem',
     lineHeight: '1.6',
   },
+  recommendation: {
+    color: '#ff0000', 
+    fontWeight: 'bold',
+  },
   button: {
     marginTop: '20px',
-    padding: '15px 30px', // Increased padding for wider button
-    fontSize: '18px', // Increased font size
+    padding: '15px 30px', 
+    fontSize: '18px', 
     fontWeight: 'bold',
     color: '#000',
-    backgroundColor: '#eaeaea', // Gray background
+    backgroundColor: '#eaeaea',
     border: 'none',
     borderRadius: '5px',
     textDecoration: 'none',
@@ -98,7 +99,7 @@ const styles = {
     transition: 'background-color 0.3s, color 0.3s',
   },
   buttonHover: {
-    backgroundColor: '#ff0000', // Red background on hover
-    color: '#fff', // White text on hover
+    backgroundColor: '#ff0000', 
+    color: '#fff',
   }
 };

@@ -88,12 +88,12 @@ export default function Projects() {
 
 const styles = {
     container: {
-        fontFamily: 'Arial, sans-serif',
+        fontFamily: 'monospace, Arial, sans-serif',
         color: '#000',
         margin: '0 auto',
         maxWidth: '1000px',
         padding: '20px',
-        backgroundColor: '#fff', // White background
+        backgroundColor: '#fff',
     },
     projectTile: {
         display: 'flex',
@@ -124,10 +124,10 @@ const styles = {
         fontSize: '1.2rem',
         fontWeight: 'bold',
         marginBottom: '5px',
-        color: '#000', // Set heading color to black
+        color: '#000', 
     },
     projectLink: {
-        color: '#000', // Set link color to black
+        color: '#000', 
         textDecoration: 'none',
     },
     techStack: {
@@ -150,9 +150,9 @@ const styles = {
         display: 'inline-block',
         marginTop: '8px',
         padding: '8px 16px',
-        backgroundColor: '#ff0000', // Bright red background
-        color: '#fff', // White text
-        border: '1px solid #ff0000', // Bright red border
+        backgroundColor: '#ff0000', 
+        color: '#fff', 
+        border: '1px solid #ff0000', 
         borderRadius: '4px',
         textDecoration: 'none',
         fontSize: '0.85rem',
@@ -160,8 +160,8 @@ const styles = {
         transition: 'background-color 0.3s ease, color 0.3s ease',
     },
     githubLinkHover: {
-        backgroundColor: '#fff', // White background
-        color: '#ff0000', // Bright red text
+        backgroundColor: '#fff', 
+        color: '#ff0000', 
     },
 };
 

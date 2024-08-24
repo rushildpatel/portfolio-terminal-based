@@ -54,7 +54,7 @@ export default function Home() {
                             See Resume
                         </a>
                     </li>
-                    <li style={styles.navItem}><a href="/terminalPage" style={styles.navLink}>
+                    <li style={styles.navItem}><a href="/terminalPage" style={styles.navLink} target='"blank'>
                          {/* <Image src="/email.svg" alt="Email Icon" width={24} height={24} style={iconStyles.email} /> */}
                     Terminal View</a></li>
                 </ul>
@@ -63,7 +63,7 @@ export default function Home() {
             <div style={styles.content}>
                 <div id="profile" style={styles.profile}>
                     <div style={styles.profileColumns}>
-                        {/* Left Column */}
+
                         <div style={styles.leftColumn}>
                             <h3 style={styles.heading}>Rushil Patel</h3>
                             <p style={styles.subHeading}>Student and Developer</p>
@@ -77,7 +77,7 @@ export default function Home() {
                                     onMouseEnter={() => handleMouseEnter('email')}
                                     onMouseLeave={handleMouseLeave}
                                 >
-                                    <Image src="/email.svg" alt="Email Icon" width={24} height={24} style={iconStyles.email} />
+                                    <Image src="/email.svg" alt="Email Icon" width={30} height={30} style={iconStyles.email} />
                                 </a>
                                 <a
                                     href="https://github.com/rushildpatel"
@@ -85,7 +85,7 @@ export default function Home() {
                                     onMouseEnter={() => handleMouseEnter('github')}
                                     onMouseLeave={handleMouseLeave}
                                 >
-                                    <Image src="/github.svg" alt="GitHub Icon" width={24} height={24} style={iconStyles.github} />
+                                    <Image src="/github.svg" alt="GitHub Icon" width={30} height={30} style={iconStyles.github} />
                                 </a>
                                 <a
                                     href="https://www.linkedin.com/in/rushilpatel07/"
@@ -93,7 +93,7 @@ export default function Home() {
                                     onMouseEnter={() => handleMouseEnter('linkedin')}
                                     onMouseLeave={handleMouseLeave}
                                 >
-                                    <Image src="/linkedin.svg" alt="LinkedIn Icon" width={24} height={24} style={iconStyles.linkedin} />
+                                    <Image src="/linkedin.svg" alt="LinkedIn Icon" width={30} height={30} style={iconStyles.linkedin} />
                                 </a>
                                 <a
                                     href="https://www.instagram.com/rushil______/"
@@ -102,7 +102,7 @@ export default function Home() {
                                     onMouseEnter={() => handleMouseEnter('instagram')}
                                     onMouseLeave={handleMouseLeave}
                                 >
-                                    <Image src="/instagram.svg" alt="Insta Icon" width={24} height={24} style={iconStyles.instagram} />
+                                    <Image src="/instagram.svg" alt="Insta Icon" width={30} height={30} style={iconStyles.instagram} />
                                 </a>
                                 <a
                                     href="https://drive.google.com/file/d/11mLnjl9vz8ghTB--4Ex0nuNgZfoE5lPy/view?usp=drive_link"
@@ -112,12 +112,11 @@ export default function Home() {
                                     onMouseEnter={() => handleMouseEnter('resume')}
                                     onMouseLeave={handleMouseLeave}
                                 >
-                                    <Image src="/resume.svg" alt="Resume Icon" width={24} height={24} style={iconStyles.resume} />
+                                    <Image src="/resume.svg" alt="Resume Icon" width={30} height={30} style={iconStyles.resume} />
                                 </a>
                             </div>
                         </div>
 
-                        {/* Right Column */}
                         <div style={styles.rightColumn}>
                             <Image src="/profile_img.png" alt="profile pic" width={300} height={400} style={styles.profileImage} />
                         </div>
@@ -201,9 +200,9 @@ const styles = {
         maxWidth: '1200px',
         margin: '0 auto',
         padding: '20px',
-        fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
-        color: '#000', // Black for text
-        backgroundColor: '#fff', // White background
+        fontFamily: 'monospace, Courier New, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
+        color: '#000',
+        backgroundColor: '#fff', 
     },
     navbar: {
         position: 'fixed',

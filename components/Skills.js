@@ -1,26 +1,26 @@
 const Tile = function ({ name }) {
     const buttonStyles = {
-        padding: '8px 16px', // Reduced padding
-        fontSize: '0.9rem', // Slightly smaller font size
+        padding: '8px 16px',
+        fontSize: '0.9rem', 
         borderRadius: '5px',
-        border: '0px solid', // No border
-        backgroundColor: '#eaeaea', // Updated gray background
-        color: '#000', // Black text color
+        border: '0px solid', 
+        backgroundColor: '#eaeaea',
+        color: '#000', 
         cursor: 'pointer',
         transition: 'background-color 0.3s, color 0.3s',
     };
 
     return (
-        <div style={{ marginBottom: '8px' }}> {/* Adjusted margin */}
+        <div style={{ marginBottom: '8px' }}> 
             <button
                 style={buttonStyles}
                 onMouseOver={(e) => {
-                    e.currentTarget.style.backgroundColor = '#ff0000'; // Bright red background on hover
-                    e.currentTarget.style.color = '#fff'; // White text on hover
+                    e.currentTarget.style.backgroundColor = '#ff0000'; 
+                    e.currentTarget.style.color = '#fff'; 
                 }}
                 onMouseOut={(e) => {
-                    e.currentTarget.style.backgroundColor = '#eaeaea'; // Revert to gray background
-                    e.currentTarget.style.color = '#000'; // Revert to black text color
+                    e.currentTarget.style.backgroundColor = '#eaeaea';
+                    e.currentTarget.style.color = '#000'; 
                 }}
             >
                 {name}
@@ -32,7 +32,6 @@ const Tile = function ({ name }) {
 export default function Skills() {
     return (
         <div style={styles.container}>
-            {/* Programming Languages */}
             <div style={styles.category}>
                 <div style={styles.categoryTitle}>Programming Languages</div>
                 <div style={styles.tiles}>
@@ -47,7 +46,6 @@ export default function Skills() {
                 </div>
             </div>
 
-            {/* Backend Technologies */}
             <div style={styles.category}>
                 <div style={styles.categoryTitle}>Backend Technologies</div>
                 <div style={styles.tiles}>
@@ -60,7 +58,6 @@ export default function Skills() {
                 </div>
             </div>
 
-            {/* Frontend Frameworks */}
             <div style={styles.category}>
                 <div style={styles.categoryTitle}>Frontend Frameworks</div>
                 <div style={styles.tiles}>
@@ -73,7 +70,6 @@ export default function Skills() {
                 </div>
             </div>
 
-            {/* Databases and Cloud */}
             <div style={styles.category}>
                 <div style={styles.categoryTitle}>Databases and Cloud</div>
                 <div style={styles.tiles}>
@@ -88,7 +84,6 @@ export default function Skills() {
                 </div>
             </div>
 
-            {/* OS and Tools */}
             <div style={styles.category}>
                 <div style={styles.categoryTitle}>OS and Tools</div>
                 <div style={styles.tiles}>
@@ -99,7 +94,6 @@ export default function Skills() {
                 </div>
             </div>
 
-            {/* Other Libraries and Frameworks */}
             <div style={styles.category}>
                 <div style={styles.categoryTitle}>Other Libraries and Frameworks</div>
                 <div style={styles.tiles}>
@@ -111,7 +105,6 @@ export default function Skills() {
                 </div>
             </div>
 
-            {/* Data and Machine Learning */}
             <div style={styles.category}>
                 <div style={styles.categoryTitle}>Data and Machine Learning</div>
                 <div style={styles.tiles}>
@@ -131,12 +124,12 @@ export default function Skills() {
 
 const styles = {
     container: {
-        fontFamily: 'Arial, sans-serif',
-        color: '#000', // Black text color
+        fontFamily: 'monospace, Courier New, Arial, sans-serif',
+        color: '#000', 
         padding: '20px',
         maxWidth: '1200px',
         margin: '0 auto',
-        backgroundColor: '#fff', // White background
+        backgroundColor: '#fff',
     },
     category: {
         marginBottom: '20px',
@@ -145,7 +138,7 @@ const styles = {
         fontSize: '1.2rem',
         fontWeight: 'bold',
         marginBottom: '10px',
-        color: '#000', // Black for category titles
+        color: '#000', 
     },
     tiles: {
         display: 'flex',
