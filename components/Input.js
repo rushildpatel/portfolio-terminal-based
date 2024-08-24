@@ -25,7 +25,7 @@ export default function Input({ command, onSubmit }) {
         <span style={{ color: "var(--secondary)" }}>&gt;&gt;</span>
       </label>
 
-      <input type="text" className={styles.input} value={_command} onChange={(e) => setCommand(e.target.value)} disabled={command ? true : false} ref={(input) => input && !command && input.focus()} autoFocus={command === ""}></input>
+      <input type="text" className={styles.input} value={_command} onChange={(e) => setCommand(e.target.value)} disabled={command ? true : false} ref={(input) => input && !command && input.focus()} autoFocus={command === ""} placeholder="Type command here, type `help` if stuck"></input>
     </form>
   );
 }

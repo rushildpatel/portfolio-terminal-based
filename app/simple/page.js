@@ -45,7 +45,7 @@ export default function Home() {
                         Contact</a></li>
                     <li style={styles.navItem}>
                         <a
-                            href="https://drive.google.com/file/d/11mLnjl9vz8ghTB--4Ex0nuNgZfoE5lPy/view?usp=drive_link"
+                            href="https://drive.google.com/drive/folders/1DqIoQ4Bwn0_XZsIXdX7HpW9Ok1yfsfSy?usp=drive_link"
                             target="_blank"
                             rel="noopener noreferrer"
                             style={styles.navLink}
@@ -105,7 +105,7 @@ export default function Home() {
                                     <Image src="/instagram.svg" alt="Insta Icon" width={30} height={30} style={iconStyles.instagram} />
                                 </a>
                                 <a
-                                    href="https://drive.google.com/file/d/11mLnjl9vz8ghTB--4Ex0nuNgZfoE5lPy/view?usp=drive_link"
+                                    href="https://drive.google.com/drive/folders/1DqIoQ4Bwn0_XZsIXdX7HpW9Ok1yfsfSy?usp=drive_link"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     style={styles.link}
@@ -177,7 +177,7 @@ export default function Home() {
                             <Image src="/instagram.svg" alt="Insta Icon" width={24} height={24} style={iconStyles.instagram} />
                         </a>
                         <a
-                            href="https://drive.google.com/file/d/11mLnjl9vz8ghTB--4Ex0nuNgZfoE5lPy/view?usp=drive_link"
+                            href="https://drive.google.com/drive/folders/1DqIoQ4Bwn0_XZsIXdX7HpW9Ok1yfsfSy?usp=drive_link"
                             target="_blank"
                             rel="noopener noreferrer"
                             style={styles.link}

@@ -347,7 +347,7 @@ export const CONTENTS = {
   experience: getExperience,
   contact: getContacts,
   resume: () => {
-    window.open("https://drive.google.com/file/d/11mLnjl9vz8ghTB--4Ex0nuNgZfoE5lPy/view?usp=drive_link", "_blank");
+    window.open("https://drive.google.com/drive/folders/1DqIoQ4Bwn0_XZsIXdX7HpW9Ok1yfsfSy?usp=drive_link", "_blank");
     return "";
   },
   error: (input) => `<div class="help-command">sh: Unknown command: ${input}</div><div class="help-command">See \`help\` for info<br/>`,
